@@ -24,7 +24,7 @@ Marlin) and can be consumed by GPX. So what's the difference?
 ##Tool Change
 Typical RepRap community gcode for change tools or extruders is just:
 
-{% highlight asm %}
+{% highlight text %}
 T1
 {% endhighlight %}
 
@@ -32,7 +32,7 @@ But from what I can tell, whatever tool was specified last is expected to
 persist. So a move command with T1 as a parameter is supposed to carry over to
 the following line.
 
-{% highlight asm %}
+{% highlight text %}
 G1 X6.476 Y17.116 E0.05057 F1800.000 T1
 G1 X4.821 Y17.654 E0.13476
 {% endhighlight %}
@@ -41,14 +41,14 @@ But MakerWare and ReplicatorG won't take any of those as a toolchange
 apparently.  The tool parameter just applies to the command on that line.
 To change tools with MakerWare:
 
-{% highlight asm %}
+{% highlight text %}
 M135 T1
 {% endhighlight %}
 
 But ReplicatorG both produces (when slicing) and expects (when converting gcode
 to x3g) the following.
 
-{% highlight asm %}
+{% highlight text %}
 M108 T1
 {% endhighlight %}
 
@@ -59,7 +59,7 @@ however.
 Typical RepRap community gcode for setting various temperatures and continuing
 or waiting are the following:
 
-{% highlight asm %}
+{% highlight text %}
 M109 S230 T0 ; set T0's temp to 230 degrees celsius and wait
 M104 S230 T0 ; set T0's temp to 230 and continue without waiting
 M116         ; wait for all set temperatures to be within firmware margin
@@ -68,7 +68,7 @@ M190 S100    ; set bed temperature to 100 and continue without waiting
 {% endhighlight %}
 
 But MakerWare and ReplicatorG produce and expect the following:
-{% highlight asm %}
+{% highlight text %}
 M109 S100    ; set bed temperature to 100 degrees celsius and continue
 {% endhighlight %}
 
@@ -85,14 +85,14 @@ gcode.  You really shouldn't though because it should just run based on the
 temperature of the nozzle for longevity of the machine.
 
 RepRap style:
-{% highlight asm %}
+{% highlight text %}
 M106 S127 ; Turn the cooling fan on at 50% speed
 M106 S0   ; Turn off the cooling fan
 M107      ; Also turn off the cooling fan
 {% endhighlight %}
 
 MakerWare/ReplicatorG style:
-{% highlight asm %}
+{% highlight text %}
 M126 S1   ; Turn on the cooling fan
 M126 S0   ; Turn off the cooling fan
 M127      ; Turn off the cooling fan
