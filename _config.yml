@@ -7,7 +7,7 @@ description: > # this means to ignore newlines until "baseurl:"
   being is github.io and Jekyll. 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://markwal.github.io" # the base hostname & protocol for your site
-twitter_username: markwal
+twitter_username: walkmarker
 github_username:  markwal
 
 # Build settings
