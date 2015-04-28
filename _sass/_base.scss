@@ -130,7 +130,7 @@ code {
     font-size: 15px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
-    background-color: #eef;
+    background-color: #eee;
 }
 
 code {
@@ -139,7 +139,7 @@ code {
 
 pre {
     padding: 8px 12px;
-    overflow-x: scroll;
+    overflow-x: auto;
 
     > code {
         border: 0;
@@ -201,4 +201,29 @@ pre {
             fill: $grey-color;
         }
     }
+}
+
+/**
+ * Tables
+ */
+table {
+    display: block;
+    overflow: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 15px 0;
+}
+
+table th,table td {
+    border: 1px solid #ddd;
+    padding: 6px 13px;
+}
+
+table tr {
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+    background-color: #eee;
 }
