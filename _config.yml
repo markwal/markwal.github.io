@@ -1,0 +1,14 @@
+# Site settings
+title: MarkWal's Awesome Blog
+email: markwal@hotmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Ok, how many blogs have I started with exactly one post. Here's another. Each
+  one because there was some cool new way to do a blog. This one's excuse for
+  being is github.io and Jekyll. 
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://markwal.github.io" # the base hostname & protocol for your site
+twitter_username: markwal
+github_username:  markwal
+
+# Build settings
+markdown: kramdown
