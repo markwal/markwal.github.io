@@ -121,7 +121,7 @@ these cases.
 | M109 |      | Set nozzle temperature and wait |
 | M190 | M109 | Set bed temperature and continue |
 | M140 |      | Set bed temperature and wait |
-|      | M116 | Wait for all temperature targets |
+| M116 |      | Wait for all temperature targets |
 | M106 | M126 | Set cooling fan state |
 | M107 | M127 | Cooling fan off |
 |      | M106 | Set extruder heatsink fan state |
