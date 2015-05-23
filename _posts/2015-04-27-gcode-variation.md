@@ -3,6 +3,7 @@ layout: post
 title:  "Gcode variation"
 date:   2015-04-27 23:53:13
 categories: 3dprinting
+comments: True
 ---
 There's a fair amount of variation in gcode out there.  Basically because as
 each vendor has a problem to solve it shows up as a new gcode. Plus since the
@@ -22,6 +23,9 @@ Desktop) and RepRap flavor that is output by most slicers (like when you choose
 Marlin) and can be consumed by GPX. So what's the difference?
 
 ##Tool Change
+EDIT: This info is derived from reading GPX source code, I need to go back and
+play with MakerBot and RepG because I think GPX may have got this one wrong.
+
 Typical RepRap community gcode for change tools or extruders is just:
 
 {% highlight text %}
@@ -67,7 +71,10 @@ M140 S100    ; set bed temperature to 100 degrees celsius and wait
 M190 S100    ; set bed temperature to 100 and continue without waiting
 {% endhighlight %}
 
-But MakerWare and ReplicatorG produce and expect the following:
+MakerWare and ReplicatorG produce and expect the same for M104 and GPX will
+accept all, but the following, of them in either mode (MakerBot or Reprap). The
+snag is the following:
+
 {% highlight text %}
 M109 S100    ; set bed temperature to 100 degrees celsius and continue
 {% endhighlight %}
