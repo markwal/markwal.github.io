@@ -16,7 +16,7 @@ G1 X6.476 Y17.116 E0.05057 F1800.000 T1
 The first bit `G1` is the gcode command. `G1` is "controlled move". The rest of
 the line are parameters to that command. In this case, positions specified in
 millimeters. The positions may be relative to the current position or absolute
-which depends on the mode. Other gcode commands select (G90 and G91) absolute or
+which depends on the mode. Other gcode commands select (`G90` and `G91`) absolute or
 relative. Positive X is generally to the right and positive Y is away from the
 front of the machine.
 
@@ -28,12 +28,12 @@ MakerBot printers or there clones is the center of the bed.
 So the coordinates X & Y is the position on the coordinate plane (there's also
 Z). What's the rest of it?
 
-E is the extruder position. There might be more than one, so the E coordinate is
+`E` is the extruder position. There might be more than one, so the `E` coordinate is
 for the currently selected extruder. It is also absolute if the others are so to
 extrude 5mm _more_plastic it has to be 5 more than the last command.
 
-F is the feedrate. The units are in mm per minute.  That's just how fast should
+`F` is the feedrate. The units are in mm per minute.  That's just how fast should
 the bot travel to get to the specified location.
 
-T is the tool selector parameter. The tool numbers count from zero. For my bot,
-T0 is the right hand extruder and T1 is the left.
+`T` is the tool selector parameter. The tool numbers count from zero. For my bot,
+`T0` is the right hand extruder and `T1` is the left.
