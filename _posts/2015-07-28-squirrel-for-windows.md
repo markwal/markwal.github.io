@@ -36,7 +36,7 @@ Unzip 'em and put them in a folder on your path.
 
 It's a simple xml text file. Mine is at
 (gpx.nuspec)[https://github.com/markwal/GpxUi/blob/master/gpx.nuspec].
-``` xml
+{% highlight xml %}
 <?xml version="1.0"?>
 <package>
   <metadata>
@@ -53,7 +53,7 @@ It's a simple xml text file. Mine is at
     <tags>gcode x3g makerbot</tags>
   </metadata>
 </package>
-```
+{% endhighlight %}
 
 [Nuspec Reference](https://docs.nuget.org/Create/NuSpec-Reference)
 
@@ -72,7 +72,7 @@ make the directory tree hold the files and run nuget on that.
 First I make a directory tree that contains all the files I want in setup. I
 use relative paths and a combination of `cp` and `windeployqt` since this is a
 Qt project. And then I call nuget.exe on it.  From the Makefile:
-``` make
+{% highlight make %}
 GPXUI_VERSION = $(shell git describe --tag --dirty)
 SQUIRRELWIN = build/squirrel.windows/
 SQUIRRELWINBIN = build/squirrel.windows/lib/net45/
@@ -83,7 +83,7 @@ squirrel.windows:
 	cp build/mingw32/release/GpxUi.exe $(SQUIRRELWINBIN)
 	windeployqt --release-with-debug-info --no-plugins --no-translations $(SQUIRRELWINBIN)GpxUi.exe
 	nuget pack gpx.nuspec -Version $(GPXUI_VERSION) -BasePath $(SQUIRRELWIN) -OutputDirectory $(SQUIRRELWIN)
-```
+{% endhighlight %}
 
 [Nuget CLI Reference](http://docs.nuget.org/consume/Command-Line-Reference)
   (the `pack` command is the interesting one for making squirrel setup)
@@ -98,9 +98,9 @@ be a no prompt install.
 This command goes at the end of that Makefile recipe above, but I break it out
 here so I can put in some more links.
 
-``` bash
+{% highlight bash %}
 	Squirrel --releasify build/squirrel.windows/GpxUi.$(GPXUI_VERSION).nupkg --releaseDir=$(SQUIRRELWIN)release
-```
+{% endhighlight %}
 
 And in that output directory (or in ./releases if you don't specify), you'll
 find a setup.exe that puts all of those files from lib/net45 in a folder in
