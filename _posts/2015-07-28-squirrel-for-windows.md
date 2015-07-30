@@ -7,7 +7,7 @@ comments: True
 ---
 # Squirrel: It's like ClickOnce but Works
 Squirrel for Windows is nifty. It really meets the goals set out for it in the
-[README](https://github.com/Squirrel/Squirrel.Windows/master/README.md).  It's
+[README](https://github.com/Squirrel/Squirrel.Windows/blob/master/README.md).  It's
 fast, it makes setup that doesn't need wizards, UAC, etc. And if you already know
 how to make nuspec's and nupkg's, it's easy to use for the developer too.
 
