@@ -35,7 +35,7 @@ Unzip 'em and put them in a folder on your path.
 ## Create the .nuspec file
 
 It's a simple xml text file. Mine is at
-(gpx.nuspec)[https://github.com/markwal/GpxUi/blob/master/gpx.nuspec].
+[gpx.nuspec](https://github.com/markwal/GpxUi/blob/master/gpx.nuspec).
 {% highlight xml %}
 <?xml version="1.0"?>
 <package>
