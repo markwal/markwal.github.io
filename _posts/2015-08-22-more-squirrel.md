@@ -7,11 +7,15 @@ comments: True
 ---
 # Getting fancy
 OK, so up through the last post, we'd figured out how to use Squirrel for
-Windows to install the files and without event handlers, Squirrel did a nice
-job of creating shortcuts for every .exe in the package and while it made diffs
-packages for smaller downloads when upgrading, but we hadn't wired up a call to
-check for or install upgrades.
+Windows to install stuff. In that simple configuration, Squirrel creates an icon
+on the desktop and in the start menu for every .exe it finds in the package.
 
+But...
+
+No auto-update yet, and the diffs that it generated are going to waste. And also,
+I didn't actually _want_ a shortcut for all of the .exe's.
+
+# Telling Squirrel which shortcuts to make
 So first we want to figure out how to install only the shortcuts we want. In my
 case, I have a backround .exe that can be used from the command line, but is
 entirely useless when launched from a shortcut, so how do we supress the
@@ -36,7 +40,7 @@ events is by including a VERSIONINFO block in the executable with a special
 VALUE in it "SquirrelAwareVersion" that is set to "1". You add this to your
 exe resources via the rc compiler. Mine looks like this:
 
-{% highlight rc %}
+{% highlight text %}
 #include "build/version.h"
 #include <winver.h>
 
