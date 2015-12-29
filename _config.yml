@@ -1,10 +1,11 @@
 # Site settings
-title: MarkWal's Blog
+title: MarkWal's Info Collector
 email: markwal@hotmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Ok, how many blogs have I started with exactly one post. Here's another. Each
-  one because there was some cool new way to do a blog. This one's excuse for
-  being is github.io and Jekyll. 
+  As I write stuff down that I want to remember for later, I'll post it here,
+  well some of it anyway, when I remember. I'm using a blog template so that I
+  can just be lazy and do timestamp and category organization, but I'm not really
+  gonna blog.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://markwal.github.io" # the base hostname & protocol for your site
 twitter_username: walkmarker
@@ -12,3 +13,4 @@ github_username:  markwal
 
 # Build settings
 markdown: kramdown
+highlighter: pygments
