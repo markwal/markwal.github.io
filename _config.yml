@@ -13,4 +13,4 @@ github_username:  markwal
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
