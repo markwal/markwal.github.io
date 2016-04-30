@@ -135,11 +135,11 @@ G92 E0 ; set E to 0 again because the slicer's next extrusion is relative to thi
 {% endhighlight %}
 
 # start gcode Cura 15.04 single left
-Use the single left gcode, but change the set nozzle temperature line (M104) to
+Use the single right gcode, but change the set nozzle temperature line (M104) to
 the following:
 
 {% highlight text %}
-M104 S[first_layer_temperature_0] T1 ; set nozzle temp, don't wait
+M104 S{print_temperature} T1 ; set nozzle temp, don't wait
 {% endhighlight %}
 
 And insert the switch extruder just before the wait for heatup (M116):
