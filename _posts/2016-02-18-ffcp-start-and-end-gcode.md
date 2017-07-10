@@ -82,7 +82,7 @@ G92 E0 ; set E to 0 again because the slicer's next extrusion is relative to thi
 {% endhighlight %}
 
 # start gcode Slic3r single left
-Use the single left gcode, but change the set nozzle temperature line (M104) to
+Use the single right gcode, but change the set nozzle temperature line (M104) to
 the following:
 
 {% highlight text %}
