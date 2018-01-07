@@ -33,3 +33,7 @@ permalink: /wheels/
 [Pillow-4.3.0-cp27-none-linux_armv6l.whl](/wheelhouse/Pillow-4.3.0-cp27-none-linux_armv6l.whl)
 
 [Pillow-4.3.0-cp27-none-linux_armv7l.whl](/wheelhouse/Pillow-4.3.0-cp27-none-linux_armv7l.whl)
+
+[Pillow-5.0.0-cp27-none-linux_armv6l.whl](/wheelhouse/Pillow-5.0.0-cp27-none-linux_armv6l.whl)
+
+[Pillow-5.0.0-cp27-none-linux_armv7l.whl](/wheelhouse/Pillow-5.0.0-cp27-none-linux_armv7l.whl)
