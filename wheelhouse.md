@@ -34,6 +34,8 @@ permalink: /wheels/
 
 [cryptography-2.2.2-cp27-none-linux_armv7l.whl](/wheelhouse/cryptography-2.2.2-cp27-none-linux_armv7l.whl)
 
+[cryptography-3.0-cp27-none-linux_armv7l.whl](/wheelhouse/cryptography-3.0-cp27-none-linux_armv7l.whl)
+
 [Pillow-4.2.1-cp27-none-linux_armv6l.whl](/wheelhouse/Pillow-4.2.1-cp27-none-linux_armv6l.whl)
 
 [Pillow-4.2.1-cp27-none-linux_armv7l.whl](/wheelhouse/Pillow-4.2.1-cp27-none-linux_armv7l.whl)
