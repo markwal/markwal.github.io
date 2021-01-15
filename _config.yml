@@ -14,3 +14,4 @@ github_username:  markwal
 # Build settings
 markdown: kramdown
 highlighter: rouge
+exclude: encrusted
